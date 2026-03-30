@@ -16,3 +16,17 @@ console.log(rearrange([-1, -1, 6, 1, 9, 3, 2, -1, 4, -1]));
 
 // this approach rather than rearranging the original array in place returns a new array. Need to revisit to figure out a algorithm that will meet the conditions of the problem
 
+// Maximum Circular Subarray Sum 
+const maxSum = (arr) => {
+    let largestSum = arr.reduce((acc, curr) => acc + curr, 0);
+    let tail = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(largestSum - Math.abs(tail) + tail > largestSum) largestSum =  largestSum - Math.abs(tail) + tail;
+        tail = arr[i];
+        console.log(largestSum - Math.abs(tail) + tail)
+    }
+    console.log(largestSum);
+    return;
+}
+
+maxSum([8, -8, 9, -9, 10, -11, 12])
