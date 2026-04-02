@@ -65,3 +65,23 @@ const pairOrdering = (arr, ind) => {
 // }
 
 // console.log(productArray([10, 3, 5, 6, 2]));
+
+// kth sum contiguous subarray
+// need to create a pointer that moves over when we've reached the end of the array
+
+// const contSub = (arr, k) => {
+//     let n = arr.length;
+//     let sums = [];
+//     for (let i = 0; i < n; i++) {
+//         let sum = 0;
+//         for (let j = i; j < n; j++) {
+//             sum += arr[j];
+//             sums.push(sum);
+//         }
+//     }
+//     sums.sort((a, b) => b - a);
+//     return sums[k - 1];
+// }
+
+// console.log(contSub([20,-5,-1], 3))
+
