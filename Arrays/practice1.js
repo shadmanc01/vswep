@@ -85,3 +85,22 @@ const pairOrdering = (arr, ind) => {
 
 // console.log(contSub([20,-5,-1], 3))
 
+// count triangles 
+// function countTriangles(arr) {
+//     let res = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             for (let k = j + 1; k < arr.length; k++) {
+//                 if (arr[i] + arr[j] > arr[k] &&
+//                     arr[i] + arr[k] > arr[j] &&
+//                     arr[k] + arr[j] > arr[i]) {
+//                     res++;
+//                 }
+//             }
+//         }
+//     }
+//     return res;
+// }
+
+// const arr = [4, 6, 3, 7];
+// console.log(countTriangles(arr));
