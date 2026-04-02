@@ -33,6 +33,7 @@ const maxSum = (arr) => {
 
 // this approach is different from the other approaches in that I am using a map to store the index and the value
 // in my second iteration I am updating the spots within the array
+
 const pairOrdering = (arr, ind) => {
     const pairs = {};
     for(let i = 0; i < arr.length; i++) {
@@ -48,3 +49,19 @@ const pairOrdering = (arr, ind) => {
 
 // pairOrdering([10,11,12], [1,0,2]);
 // pairOrdering([50, 40, 70, 60, 90], [3,  0,  4,  1,  2])
+
+// product of array except self
+
+// const productArray = (arr) => {
+//     let product = 1;
+//     for(let i = 0; i < arr.length; i++) {
+//         product*= arr[i];
+//     }
+//     const results = [];
+//     for(let i = 0; i < arr.length; i++) {
+//         results.push(product/arr[i]);
+//     }
+//     return results;
+// }
+
+// console.log(productArray([10, 3, 5, 6, 2]));
