@@ -23,9 +23,9 @@ if the el is not an array
 function flatten(arr) {
     const results = [];
     for (let i = 0; i < arr.length; i++) {
-        if (Array.isArray(arr[i])) {
-            const flattened = flatten(arr[i]);
-            results.push(...flattened);
+        if (Array.isArray(arr[i])) { // avoids the issue of if we ever deal with strings 
+            const flattened = flatten(arr[i]); // stores the results of the recursive call into an array
+            results.push(...flattened); // pushed the raw values of the array into results
         } else {
             results.push(arr[i]);
         }
@@ -33,4 +33,5 @@ function flatten(arr) {
     return results;
 }
 
-console.log(flatten([[1], [1], [1, [1, [1, 2], 3], 1], [1], [1, [2], 3], [1], [1, [2, [3, 4], 5], 6], 7]));
+// console.log(flatten([[1], [1], [1, [1, [1, 2], 3], 1], [1], [1, [2], 3], [1], [1, [2, [3, 4], 5], 6], 7]));
+// console.log(flatten([[], [], [[[], [], [[], [], ]]]]))
