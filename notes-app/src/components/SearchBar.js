@@ -23,7 +23,6 @@ function SearchBar({ onSearch }) {
         onChange={handleChange}
         style={styles.input}
       />
-
       {input && (
         <button onClick={handleClear} style={styles.clearButton}>
           ✕
@@ -36,28 +35,27 @@ function SearchBar({ onSearch }) {
 const styles = {
   container: {
     position: "relative",
-    width: "100%",
-    maxWidth: "400px",
-    margin: "16px auto"
+    marginBottom: "20px",
   },
   input: {
     width: "100%",
     padding: "10px 36px 10px 12px",
-    borderRadius: "8px",
+    fontSize: "14px",
     border: "1px solid #ccc",
-    fontSize: "14px"
+    borderRadius: "8px",
+    boxSizing: "border-box",
   },
   clearButton: {
     position: "absolute",
-    right: "8px",
+    right: "10px",
     top: "50%",
     transform: "translateY(-50%)",
     border: "none",
     background: "transparent",
     cursor: "pointer",
     fontSize: "16px",
-    color: "#888"
-  }
+    color: "#777",
+  },
 };
 
 export default SearchBar;
