@@ -1,8 +1,8 @@
 function Header() {
   return (
     <header style={styles.header}>
-      <h1 style={styles.title}>Notes App</h1>
-      <p style={styles.subtitle}>Create, edit, and search your notes</p>
+      <h1 style={styles.title}>Just Notes</h1>
+      <p style={styles.subtitle}>Say something</p>
     </header>
   );
 }
