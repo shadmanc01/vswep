@@ -48,6 +48,30 @@ Array.prototype.myReduce = function (callback, initialValue) {
     }
     return accumulator;
 }
+
+Array.prototype.myFlatMap = function(callback) {
+    if (typeof callback !== "function") {
+        throw new TypeError("Callback must be a function");
+    }
+
+    const result = [];
+
+    for (let i = 0; i < this.length; i++) {
+        const mappedValue = callback(this[i], i, this);
+
+        if (Array.isArray(mappedValue)) {
+            for (let j = 0; j < mappedValue.length; j++) {
+                result.push(mappedValue[j]);
+            }
+        } else {
+            result.push(mappedValue);
+        }
+    }
+
+    return result;
+};
+
+
 console.log(nums1.myMap(x => x * 2));
 console.log(nums1.myReduce());
 //figure out the difference between regular functions and arrow functions
