@@ -49,7 +49,7 @@ Array.prototype.myReduce = function (callback, initialValue) {
     return accumulator;
 }
 
-Array.prototype.myFlatMap = function(callback) {
+Array.prototype.myFlatMap = function (callback) {
     if (typeof callback !== "function") {
         throw new TypeError("Callback must be a function");
     }
@@ -71,9 +71,28 @@ Array.prototype.myFlatMap = function(callback) {
     return result;
 };
 
+// Array.prototype.mySort = function (callback) {
+//     if (typeof callback !== "function") {
+//         throw new TypeError("Callback must be a function");
+//     }
+//     const results = this;
 
-console.log(nums1.myMap(x => x * 2));
-console.log(nums1.myReduce());
+//     const defCompare = (a, b) => {
+//         const strA = String(a);
+//         const strB = String(b);
+
+//     }
+// }
+// console.log(nums1.myMap(x => x * 2));
+// console.log(nums1.myReduce());
 //figure out the difference between regular functions and arrow functions
 // Homework: create myMap, myReduce, myFlatMap, mySort(use any sorting algorithm), any other functions
 // read book to grasp basics of JS, Mozilla, you don't know JS
+
+// read up on segment trees and tries
+// need to understand the basics of the tech stack
+// how command lines and data bases work and also systems design
+// build an application for 5-100 people
+// deploy using aws
+// variable declarations are moved up, if js is interprated, it doesn't scan the code before
+
